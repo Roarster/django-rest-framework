@@ -405,7 +405,7 @@ class ModelSerializer(Serializer):
             kwargs['choices'] = model_field.flatchoices
             return ChoiceField(**kwargs)
 
-        if model_field.__class__ == models.TextField or model_field.__class__ == models.CharField:
+        if model_field.__class__ in (models.TextField, models.CharField):
             kwargs['blank'] = model_field.blank
 
         field_mapping = {

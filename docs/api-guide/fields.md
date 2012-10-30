@@ -124,12 +124,12 @@ Corresponds to `django.db.models.fields.BooleanField`.
 
 ## CharField
 
-A text representation, optionally validates the text to be shorter than `max_length` and longer than `min_length`.
+A text representation, optionally validates the text to be shorter than `max_length` and longer than `min_length`.  Accepts an empty value if `blank=True`.
 
 Corresponds to `django.db.models.fields.CharField`
 or `django.db.models.fields.TextField`.
 
-**Signature:** `CharField(max_length=None, min_length=None)`
+**Signature:** `CharField(max_length=None, min_length=None, blank=False)`
 
 ## ChoiceField
 
